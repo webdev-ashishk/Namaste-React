@@ -1,2 +1,2 @@
-# Namaster-React
-All Resource  of Namaste React are Here
+# Namaste-React
+All Resources  of Namaste React are Here !
