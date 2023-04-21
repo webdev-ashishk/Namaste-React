@@ -1,0 +1,93 @@
+Note:
+Q1: what is differece b/t git or github?
+1.GitHub is place where all git repo are hoisted!
+2.Git is version Control system
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+ 
+Q2: What is full form of npm ->node Package manager
+A: wrong! 
+  There is no Full form of NPM
+  Basically NPM manages Packages   
+  NPM is Repository for all Standard Package
+>>>>>>>>>>>>>>>>>>Initializing npm in Our Project>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+cmd:1. npm init(this will create package.json)
+    2. npm init -y(this will create package.json)
+
+Q3: What is Package.json file
+A: Configuration for NPM and It will keep track of which version of package are installed in our system
+Note: not exact version only Approax version!
+
+
+Q4: Why we need package.json file?
+A: When we using different library than we need to know which version we useing and manage all the things by npm
+
+NOTE: some times package also knows dependancie 
+
+* Our Project depend of lot of packages those Project  package depend on are the dependencies  and npm manage at . 
+NPM will take care of What is version of the package; 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+
+Q4: What is Bundler
+A: A bundler is a development tool that combines many JavaScript code files into a single one that is production-ready loadable in the browser
+
+   exam: webpack,vite,parcel
+   Here we using parcel Bundler
+ * installing Parecel in our App
+
+   cmd: npm install -D parcel
+
+   App can Have Two type of dependencies;
+   1.dev dependancie(required at development time)
+   2.Normal dependancie(required at production time)
+
+   Without parcel all code are scaliton with parcel give the body to scaliton
+
+
+   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+   Q5: What is mean ^ before very version in package.json file
+   Q6: What is mean ~ before very version in package.json file
+   
+   ^ This will automatically upgrade minnor updates of percel(recomendade)
+  ~ This will automatically update major updates of percel
+  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Q7: what is package-lock.json ?
+A: Keep the track of exact version of the package that being installed 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Q8: What is node_module file
+A:  node_module is collection of (dependancie)
+
+A: All the code we will fetch from the NPM 
+  or all is database of all the data for dependancies : 47min
+Q9: I have installed only parcel why this much file's came in node_module
+A: Transitive dependancie;
+ Parecel depents ---->Z--------->Y------>X-------->M......------>A so that containts that much files 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Q10: Which files we should ignore
+A: node_module we should ignore!
+Q10: Which file we need 
+A: package.json and package-lock.json
+need becoz both file's know a project what kind of depencies need 
+>>>>Both Maintance a note what all dependecies our project need!
+
+Q12: What its' means of integrity 
+A : What version of package present in development must be present in production
+_______________________This problem solved by Docker!_______________
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Q13: Why we ignoring node module!
+A: If we have package.json and package-lock.json 
+we can regenerate all node module again so that we ignore to upload at git!
+
+cmd: npm install 
+This command will recreate all node_module
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+timeStamp: 1hr4min Episode-02->[part2]
