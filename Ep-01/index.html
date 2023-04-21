@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inception</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- ------------Loading react----------------  -->
+    <!-- This is core file of react -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <!--  Usefull for DOM operations -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <!-- Write Your code from Here -->
+    <script>
+      const heading = React.createElement("h1", {}, "Hello World From React!");
+      ReactDOM.render(heading, document.getElementById("root"));
+    </script>
+  </body>
+</html>

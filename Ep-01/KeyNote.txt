@@ -1,0 +1,5 @@
+Q1. Why React CDN have two links why not they combine!
+ Why did React Make Two files Not Combining one files
+A: No
+ Because React Doesn't work with only browser
+ React also work with mobile phones (React-Native)
