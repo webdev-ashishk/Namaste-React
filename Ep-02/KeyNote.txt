@@ -91,3 +91,25 @@ This command will recreate all node_module
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 timeStamp: 1hr4min Episode-02->[part2]
+
+
+
+timeStamp: 1hr4min Episode-02->[part2]
+
+cmd: npx parcel index.html
+     npx parcel <fileName>
+
+npx parcel index.html is a command that <runs Parcel>, a web application bundler, with the entry point file index.html. Parcel will analyze the dependencies in index.html and bundle all the necessary files together into a single output file or set of files.
+
+The npx command is used to run a command-line tool that is not installed globally on your system, but rather in your project's node_modules directory. This ensures that you are running the version of the tool that is specified in your project's dependencies.
+
+In summary, npx parcel index.html is used to bundle your web application's files using Parcel.
+
+* NOTE loading react from CDN is not good way to make react App
+Q1. Why This is not good?
+A: Fetching from CDN takes a costly operation
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+second way to insert react in our project
+cmd: 1.npm install react <installing react as normal depencies>
+     2.npm install react-dom<npm i react-dom>[short way of do same things] 
