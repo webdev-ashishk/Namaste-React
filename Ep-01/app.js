@@ -14,6 +14,7 @@ const heading = React.createElement(
 );
 console.log(heading); //return object(react element)
 //render method takes heading and converted into heading tag putt is to DOM
+//render method take a div not appends the new html elements its replace's older html to new HTML elements :1hr16min:20sec
 ReactDOM.render(heading, document.getElementById("root"));
 
 //<--------------timeStamp: 55min 8sec------------------->
@@ -67,4 +68,7 @@ ReactDOM.render(parent, document.getElementById("root3"));
 
 //-------------- timeStamp: 1hr 8min 2sec-------------------------------->
 //episode01-part5
-
+//React only working div id root here :1hr18min
+//We can used React only header-part,or only navigation,or only side bar accroding to developer
+//we cam use react for small portion of our webside or App
+//There is no need to build entire app or website using react You can build your Product as You Like
