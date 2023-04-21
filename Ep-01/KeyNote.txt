@@ -3,3 +3,7 @@ Q1. Why React CDN have two links why not they combine!
 A: No
  Because React Doesn't work with only browser
  React also work with mobile phones (React-Native)
+
+ Q2.Placeing .js file in index.html order is imprtant?
+ A: Yes
+ 
