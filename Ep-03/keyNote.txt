@@ -1,0 +1,28 @@
+<-----------------------ep-03[part-01]-------------------------------------->
+Q1: who to run a project
+A: npx parcel index.html
+   1.This can create build for use
+   2.This will Host a website at local host 1234
+Typeing every time this command is not good practice Let's create a script that runs very time as when we required
+
+1.Let's build a script Starting a project in dev mode : goto >>package.json>>script
+cmd: "script":{
+  "start":"parcel index.html",//This will create dev build 
+  "test": "jest"
+}
+2.Let's create a scipt for Production
+cmd: "script":{
+  "start":"parcel index.html",
+  "build":"parcel build index.html",//Build a production ready 
+  "test": "jest"
+}
+Q2: How to run these script
+A: 1.npm run start [This will run parcel index.html]
+                     (or)
+    npm start[This is same as npm run start]
+    "start": keyword are reserve keyword in npm 
+   2.npm run build [This will build a project for production]
+                      
+<-----------------------ep-03[part-02]-------------------------------------->
+TS:9:34min
+
