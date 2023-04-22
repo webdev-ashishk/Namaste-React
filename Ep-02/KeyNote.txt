@@ -96,8 +96,12 @@ timeStamp: 1hr4min Episode-02->[part2]
 
 timeStamp: 1hr4min Episode-02->[part2]
 
-cmd: npx parcel index.html
+cmd: npx parcel index.html[dev Build]
      npx parcel <fileName>
+
+npx: means-->Execute the package
+npx parcel: means-->Execute the package<parcel>
+npx parcel index.html--->Parcel goes to source Index.html build a development Build for Our App and Host the Development build to local host portNum:1234
 
 npx parcel index.html is a command that <runs Parcel>, a web application bundler, with the entry point file index.html. Parcel will analyze the dependencies in index.html and bundle all the necessary files together into a single output file or set of files.
 
@@ -108,8 +112,50 @@ In summary, npx parcel index.html is used to bundle your web application's files
 * NOTE loading react from CDN is not good way to make react App
 Q1. Why This is not good?
 A: Fetching from CDN takes a costly operation
-
+   When new version of react came then we need to update CDN link 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-second way to insert react in our project
-cmd: 1.npm install react <installing react as normal depencies>
-     2.npm install react-dom<npm i react-dom>[short way of do same things] 
+Second way to insert react in our project
+               Installing react as package
+cmd: 1]  npm install react <installing react as normal depencies>
+     2]  npm install react-dom
+    2.1] npm i react-dom[short way of do same things] 
+             i=>install
+<-----------------------Parecel is just a beast----------------------------->
+<----------------------https://parceljs.org/---------------------------->
+Q1. What does parcel
+A: create Dev build
+   create Local Server 
+   HMR(hote module replacement)
+   Parcel using File watching Algorigthm(written in c++)
+   cacheing -Fast Builds
+   Image optamization(most costly operation)
+   Minification of all the file
+   Bundle all the file also(Bundling)
+   Compress a file also
+   consistent hashing
+   code spliting 
+   Differetial bundling
+   Error Handling
+   Tree-shaking(remove unused code)
+   Parcel create Different dev and prod boundles
+
+
+Q2: Why Your app is fast?
+A: Becuase of Parcel.
+  .parcel-cache make Parcel super faster
+   parcel giveing energy to The APP 
+
+
+Q3: We should push .percel-code and dist file in git ignore file!
+A: Yes(becoz we can regenerate all of this files)
+.parcel-cache we generated using: npx parcel index.html
+dist file we can generate using: npx parcel build index.html 
+
+--------------------------------------------------------------------------->
+<---Browser List--------Timestamp: 2hr1min 10sec---------------------->
+Note: We can Configure Our App according to country 
+      We can configure Our App works with older browser also!<just like goverment website>
+we need to all the following code in package.json file
+"browserlist": [
+  "last 2 versions"//This means work all last version of all browser
+]
