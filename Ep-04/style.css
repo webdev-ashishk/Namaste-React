@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  background-color: #a3a2a2;
+  color: white;
+}
+/* .li-item {
+  border: 10px solid green;
+  display: flex;
+} */
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* border: 2px solid green; */
+}
+.li-item > ul {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 10px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.li-item > ul > li {
+  margin: 10px;
+}
+.logo > img {
+  width: 80px;
+  border-radius: 10px;
+  /* border: 2px solid red; */
+}
+.cart {
+  width: 200px;
+  background-color: #f0f0f0;
+  margin: 5px;
+}
+.cart:hover {
+  /* border: 5px solid blue; */
+}
+.cart > .img > img {
+  width: 180px;
+  margin: 5px;
+}
+.body {
+  /* border: 2px solid red; */
+  margin-top: 10px;
+}
+.body > .restaurant-Container {
+  display: flex;
+  flex-wrap: wrap;
+}

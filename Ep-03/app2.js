@@ -149,6 +149,8 @@ root6.render(<ParentComponent />);
 
  This is very important concept ,Developer who working industry in 10year they also don't understand this think?
 
+ Q1: How to print react Element on the Browser?
+ A:  syntax:  {name-of-reactComponent}
 
 
 NOTE: {} inside the bracket put down any react element which data coming from api may be using api hacker can send some data and run in my broswer and still the data
@@ -158,6 +160,8 @@ but is is not possible becoze of JSX take care of all thinks
 /* 
 
 We can call functional component inside the other functional componet
+
+Q2:There is three way to print functional component which render on browser.
 
 1.{CallFunComp()}
 2.{<CallFunComp/>}
@@ -172,7 +176,7 @@ How to write mulptiple live of code inside the React Functional Componet
 a] <div></div>                    [This will add extra Node inside the DOM]
 b] <React.Fragment></React.Fragment>  [Not added extra Node inside the DOM]
 c] <></>               [recomended]{This will not added extra node inside the DOM}
-         a,b & c are Equivalent to each other
+      a,b & c are Equivalent to each other
 Q1: Where is Fragment present ?
 A: Fragment Came from [import React from "react"] this file fetch from node_modules
 Q2: Can React fragment present inside the react fragment?
