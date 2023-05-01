@@ -1,1 +1,56 @@
 Suggetion=> Before Making Building any Project You Must Plan is Properly!
+
+TS:1hr:1min:10sec
+
+Q1: What is Props?
+A: Prop is sort form of properties
+  -Property is somethings that pass to the component
+  -Props are arguments passed into React components.
+
+Q2: When to use Props?
+A: Suppose we want dynamically pass data to component ,we can pass as prop  
+  ----> end of the day component is just javascript function
+  ----> end of the day props is just aurgument to a function
+
+
+TS: 1hr16min
+<-----------------------This que. ask in system design interview-------------------->
+Q1: What is conflict Driven UI
+A: Controling UI accorind to DATA(api)
+
+
+
+
+
+<........................1hr37min:10se.......................................>
+Q2: What is cloudanery
+A: All image came in production level project through CDN
+   cloudanery is CDN 
+q3: How to host image on CDN ? 
+
+Q4: How to write js code inside the JSX?
+A: User {} curly braces and write code inside it.
+Q5: How to write CSS code inside the JSX?
+A: user {{}} double  curly braces and write code inside it. 
+
+<------------------------1hr58min:10sec--------------------------------------->
+
+Q1: Map ?
+A: Whenever used map method You must used key 
+
+Q2: Why we used key ?
+A: Lets when we have not used key in map whats happens
+  1] When we 1 container containts 2 cart 
+    then new cart added then react don't no how much cart we need to render then react re-rendered all carts.
+  2] When we have 1 Container contains 10lack carts
+  then new cart added then react doesn't now where cart added then react re-rendered all 10lack component make application little bit slower 
+
+  Q=>what is solution of this problem ?
+  A: You used key whenever used .map()  
+
+  Whenever we give unique key all elements then react know which component is added new and rendered only one component instead of re-rendering all components thats make my appliction more faster then previous version
+
+Q3: React say never used index as key 
+A: But whenever You api have not key then used index as key.
+ 
+ if possible talk to backend developer and told add unique key if possible 
