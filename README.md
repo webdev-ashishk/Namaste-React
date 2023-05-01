@@ -11,3 +11,9 @@ All Resources  of Namaste React are Here !
 ![parcel](https://user-images.githubusercontent.com/127021921/234186886-a9001490-9ec2-4b25-8d89-80befaf0dbaf.png)
 
 ---
+## How to Set Up a React App with Vite
+```
+npm create vite@latest
+```
+
+---
