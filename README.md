@@ -15,5 +15,7 @@ All Resources  of Namaste React are Here !
 ```
 npm create vite@latest
 ```
+# Build Movie Site 
+![build-by-lecture-4](https://user-images.githubusercontent.com/127021921/235501015-6485d1a4-eb1d-4a80-93fb-ca5035ae73df.png)
 
 ---
