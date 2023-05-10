@@ -33,7 +33,7 @@ Note: a]A lots of react developer think that JSX is Part of react but it is not 
       JSX is completely different
       b]Some developer thing that without JSX we can not write react but still not true you know and You can !
       c]Without JSX we can build Entire react app
-      d]JSX make developer like easy to write react code.
+      d]JSX make developer life easy to write react code.
       e]Jsx combine the html and js together
 
 Q1 : How to write img tag in JSX
