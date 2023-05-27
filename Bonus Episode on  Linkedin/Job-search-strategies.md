@@ -19,3 +19,11 @@ VirtualJobCoach.com
 4. Get support (Practive with Friend)
 5. Create Positive Attitude
 ```
+---
+
+## List of Company They posted Vacancy only at Job Portal
+## Job-Website
+```
+1. indeed.com
+2. simplyHired.com (setup linkedin)
+```
