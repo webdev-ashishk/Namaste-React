@@ -1,4 +1,13 @@
-Q1. Why React CDN have two links why not they combine!
+# How You can Use This course Effectively 
+> 1. Make Yor Notes
+> 2. Code along with class
+  
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+### Q1. Why React CDN have two links why not they combine!
  Why did React Make Two files Not Combining one files
 A: No
  Because React Doesn't work with only browser
