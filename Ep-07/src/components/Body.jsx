@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import RestaurantCard from "./RestaurantCard";
 
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
@@ -17,15 +16,23 @@ const Body = () => {
   // console.log(
   //   restaurants.data.cards[5].card.card.gridElements.infoWithStyle.restaurants
   // );
-  // console.log(allRestaurants);
+  console.log(allRestaurants);
 
   useEffect(() => {
     apiCall();
   }, []);
   return (
     <div>
-      body and Home page Rendered *
-      <RestaurantCard data={allRestaurants} />
+      body and Home page Rendered *{/* TODO */}
+      {/* <RestaurantCard data={allRestaurants} /> */}
+      {allRestaurants.map((restaurant) => (
+        <div key="info.parentId">
+          <h2>cost-for-two---{restaurant.info.costForTwo}</h2>
+          <ul>
+            <li>{restaurant.info.cloudinaryImageId}</li>
+          </ul>
+        </div>
+      ))}
     </div>
   );
 };
