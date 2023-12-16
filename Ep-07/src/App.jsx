@@ -3,7 +3,7 @@ import Header from "./components/Header";
 
 const App = () => {
   return (
-    <main className="text-2xl font-bold text-red-500">
+    <main>
       <Header />
       <Outlet />
     </main>
