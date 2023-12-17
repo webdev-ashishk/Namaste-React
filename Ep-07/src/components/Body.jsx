@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { FaStar } from "react-icons/fa";
+import { CDN_URL } from "../utils/constants";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
@@ -32,8 +34,8 @@ const Body = () => {
   return restaurantList.length === 0 ? (
     <Shimmer />
   ) : (
-    <div>
-      body and Home page Rendered
+    <div className="mt-2">
+      {/* body and Home page Rendered */}
       <div className="flex">
         <div>
           <input
@@ -43,6 +45,7 @@ const Body = () => {
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
+            placeholder="search restaurants ... "
           />
           <button
             className="bg-gray-500 p-2 rounded-lg text-white"
@@ -87,16 +90,30 @@ const Body = () => {
           </button>
         </div>
       </div>
-      *{/* TODO */}
-      {/* <RestaurantCard data={allRestaurants} /> */}
-      {filteredRestaurants.map((restaurant) => (
-        <div key="info.parentId" className="border-2 m-4 w-[400px]">
-          <h1>name # - {restaurant.info.name}</h1>
-          <ul>
-            <li>avgRatingString # {restaurant.info.avgRatingString}</li>
-          </ul>
-        </div>
-      ))}
+      {/* TODO */}
+      <div className="flex flex-wrap justify-center items-center ">
+        {/* <RestaurantCard data={allRestaurants} /> */}
+        {filteredRestaurants.map((restaurant) => (
+          <div
+            key="info.parentId"
+            className="border-2 m-4 w-[300px] rounded-lg hover:scale-x-95"
+          >
+            <img
+              src={CDN_URL + restaurant.info.cloudinaryImageId}
+              alt="res-logo"
+              className="rounded-lg"
+            />
+
+            <ul className="pl-2">
+              <li className="font-bold">{restaurant.info.name}</li>
+              <li className="flex">
+                Rating <FaStar className="px-1 text-green-500 text-2xl" />
+                {restaurant.info.avgRatingString}
+              </li>
+            </ul>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
