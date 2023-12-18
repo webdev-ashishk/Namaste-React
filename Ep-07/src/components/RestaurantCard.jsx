@@ -15,7 +15,10 @@ const RestaurantCard = (props) => {
     // eslint-disable-next-line no-unsafe-optional-chaining, react/prop-types
   } = resData?.info;
   return (
-    <div className="border-2 m-4 w-[300px] rounded-lg hover:scale-x-95 overflow-wrap-break-word">
+    <div
+      className="border-2 m-4 w-[300px] rounded-lg hover:scale-x-95 overflow-wrap-break-word"
+      style={{ backgroundColor: "#f0f0f0" }}
+    >
       <img
         src={CDN_URL + cloudinaryImageId}
         alt="res-logo"
