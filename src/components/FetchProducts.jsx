@@ -29,7 +29,7 @@ const FetchProducts = () => {
           products.map((product) => (
             <li
               key={product.id}
-              className="text-2xl font-bold text-blue-400 px-4 mx-10"
+              className="text-2xl font-bold text-blue-400 px-4 mx-10 border-2 my-4"
             >
               product : {product?.title}
               <button className="border-2 px-5 mx-4 my-5 bg-blue-500 text-white rounded-lg">
