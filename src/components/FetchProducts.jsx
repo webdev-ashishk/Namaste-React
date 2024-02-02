@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Loading from "./Loading";
 
 const FetchProducts = () => {
   const [products, setProducts] = useState([]);
@@ -22,9 +23,21 @@ const FetchProducts = () => {
     <div>
       <p>fetching data</p>
       <ul>
-        {products.map((product) => (
-          <li key={product.id}>product id is {product.id}</li>
-        ))}
+        {products.length === 0 ? (
+          <Loading />
+        ) : (
+          products.map((product) => (
+            <li
+              key={product.id}
+              className="text-2xl font-bold text-blue-400 px-4 mx-10"
+            >
+              product : {product?.title}
+              <button className="border-2 px-5 mx-4 my-5 bg-blue-500 text-white rounded-lg">
+                ADD
+              </button>
+            </li>
+          ))
+        )}
       </ul>
     </div>
   );
