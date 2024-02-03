@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { addItems } from "../utils/cartSlice";
 import Loading from "./Loading";
 
 const FetchProducts = () => {
@@ -18,10 +20,15 @@ const FetchProducts = () => {
   }, []);
   console.log(products);
   console.log(products.length);
-
+  // we are using RTK
+  const dispatch = useDispatch();
+  const handleAddItems = (productItem) => {
+    dispatch(addItems(productItem));
+  };
   return (
     <div>
       <p>fetching data</p>
+      <h2>this is redo code</h2>
       <ul>
         {products.length === 0 ? (
           <Loading />
@@ -32,8 +39,11 @@ const FetchProducts = () => {
               className="text-2xl font-bold text-blue-400 px-4 mx-10 border-2 my-4"
             >
               product : {product?.title}
-              <button className="border-2 px-5 mx-4 my-5 bg-blue-500 text-white rounded-lg">
-                ADD
+              <button
+                className="border-2 px-5 mx-4 my-5 bg-blue-500 text-white rounded-lg"
+                onClick={() => handleAddItems(product)}
+              >
+                ADD +
               </button>
             </li>
           ))
