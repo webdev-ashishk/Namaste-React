@@ -28,7 +28,6 @@ const FetchProducts = () => {
   return (
     <div>
       <p>fetching data</p>
-      <h2>this is redo code</h2>
       <ul>
         {products.length === 0 ? (
           <Loading />
