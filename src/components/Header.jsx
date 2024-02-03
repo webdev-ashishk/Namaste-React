@@ -10,7 +10,7 @@ const Header = () => {
     <nav className="">
       <ul className="flex gap-5 text-4xl bg-gray-700 text-white justify-end font-bold px-52">
         <li>
-          <Link to="/">home</Link>
+          <Link to="/product">product</Link>
         </li>
         <li>
           <Link to="/about">about</Link>

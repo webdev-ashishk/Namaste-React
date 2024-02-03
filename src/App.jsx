@@ -1,17 +1,12 @@
-import { Provider } from "react-redux";
+import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
-import Product from "./components/Product";
-import appStore from "./utils/appStore";
 
 const App = () => {
   return (
-    <Provider store={appStore}>
-      <main>
-        <Header />
-        <hr />
-        <Product />
-      </main>
-    </Provider>
+    <main>
+      <Header />
+      <Outlet />
+    </main>
   );
 };
 export default App;
