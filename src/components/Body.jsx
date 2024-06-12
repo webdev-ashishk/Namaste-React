@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
 export default function Body() {
   const [posts, setPost] = useState(null);
+  const [searchText, setSearchText] = useState("");
   useEffect(() => {
     apiCall();
   }, []);
@@ -11,17 +13,52 @@ export default function Body() {
     setPost(json);
   }
 
-  console.log(posts);
+  // console.log(posts);
+  function handleEvenPosts() {
+    const result = posts.filter((post) => post.id % 2 === 0);
+    console.log("handleEvenPosts");
+    console.log(result);
+    setPost(result);
+  }
+  function handleOddPosts() {
+    const result = posts.filter((post) => post.id % 2 !== 0);
+    console.log("handleOddPosts");
+    console.log(result);
+    setPost(result);
+  }
+  // TODO TASKS
+  // function handlePrimeNumberPosts (){}
+  // function handleCompositeNumberPosts (){}
   return !posts ? (
     <Shimmer />
   ) : (
     <div>
-      <h2>body.jsx rendered!</h2>
+      {/* filter button functionality */}
+      <div className="filter-post">
+        <button onClick={handleEvenPosts}>filter-even-number-posts</button>
+        <button onClick={handleOddPosts}>filter-odd-number-posts</button>
+      </div>
+      {/* search functionality */}
+      <div className="search-container">
+        <input
+          type="text"
+          value={searchText}
+          placeholder="search posts by id"
+          onChange={(e) => setSearchText(e.target.value)}
+        />
+        <button style={{ marginLeft: "5px" }}>search</button>
+        <p>{searchText}</p>
+        <hr />
+      </div>
+      {/* print all post data */}
       {posts.map((post) => (
-        <p key={post.id}>
-          post id : {post.id} - {post?.title}
-        </p>
+        <Link to={`/posts/${post.id}`}>
+          <p key={post.id}>
+            post id : {post.id} - {post?.title}
+          </p>
+        </Link>
       ))}
     </div>
   );
 }
+// jsonplaceholder https://jsonplaceholder.typicode.com/posts/32

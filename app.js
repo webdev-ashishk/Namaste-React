@@ -5,6 +5,7 @@ import About from "./src/components/About";
 import AppLayout from "./src/components/AppLayout";
 import Contact from "./src/components/Contact";
 import Error from "./src/components/Error";
+import Post from "./src/components/Post";
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -17,14 +18,14 @@ const appRouter = createBrowserRouter([
       },
 
       {
-        path: "/about/:about_id",
-        element: <About />,
-      },
-      {
         path: "/contact",
         element: <Contact />,
       },
     ],
+  },
+  {
+    path: "/posts/:pId",
+    element: <Post />,
   },
 ]);
 function Start() {
