@@ -56,7 +56,7 @@ export default function Body() {
           onClick={() => {
             console.log(searchText);
             const filterPost = posts.filter((post) =>
-              post?.title?.includes(searchText)
+              post?.title.toLowerCase()?.includes(searchText.toLowerCase())
             );
             setPost(filterPost);
           }}
