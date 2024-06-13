@@ -29,6 +29,9 @@ export default function Body() {
   // TODO TASKS
   // function handlePrimeNumberPosts (){}
   // function handleCompositeNumberPosts (){}
+
+  ////////////////SEARCH_DATA FUNCTION ///////
+  console.log("body");
   return !posts ? (
     <Shimmer />
   ) : (
@@ -38,16 +41,29 @@ export default function Body() {
         <button onClick={handleEvenPosts}>filter-even-number-posts</button>
         <button onClick={handleOddPosts}>filter-odd-number-posts</button>
       </div>
-      {/* search functionality */}
+      {/* search button functionality */}
       <div className="search-container">
         <input
           type="text"
           value={searchText}
           placeholder="search posts by id"
-          onChange={(e) => setSearchText(e.target.value)}
+          onChange={(e) => {
+            setSearchText(e.target.value);
+          }}
         />
-        <button style={{ marginLeft: "5px" }}>search</button>
-        <p>{searchText}</p>
+        <button
+          style={{ marginLeft: "5px" }}
+          onClick={() => {
+            console.log(searchText);
+            const filterPost = posts.filter((post) =>
+              post?.title?.includes(searchText)
+            );
+            setPost(filterPost);
+          }}
+        >
+          search
+        </button>
+
         <hr />
       </div>
       {/* print all post data */}
