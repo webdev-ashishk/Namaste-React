@@ -1,31 +1,45 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import About from "./src/components/About";
 import AppLayout from "./src/components/AppLayout";
-import Contact from "./src/components/Contact";
 import Error from "./src/components/Error";
+import Hoc from "./src/components/Hoc";
 import Post from "./src/components/Post";
+// load about and contact as on demand loading
+// import Contact from "./src/components/Contact";
+// import About from "./src/components/About";
+const About = lazy(() => import("./src/components/About"));
+const Contact = lazy(() => import("./src/components/Contact"));
+
 const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
     errorElement: <Error />,
-    children: [
-      {
-        path: "/about",
-        element: <About />,
-      },
-
-      {
-        path: "/contact",
-        element: <Contact />,
-      },
-    ],
   },
   {
     path: "/posts/:pId",
     element: <Post />,
+  },
+  {
+    path: "/contact",
+    element: (
+      <Suspense fallback={<h1>Loading contact page ...</h1>}>
+        <Contact />
+      </Suspense>
+    ),
+  },
+  {
+    path: "/about",
+    element: (
+      <Suspense fallback={<h1>Loading about page...</h1>}>
+        <About />
+      </Suspense>
+    ),
+  },
+  {
+    path: "/hoc",
+    element: <Hoc />,
   },
 ]);
 function Start() {

@@ -14,7 +14,6 @@ export default function Body() {
     setPost(json);
     setFilterPost(json);
   }
-
   // console.log(posts);
   function handleEvenPosts() {
     const result = posts.filter((post) => post.id % 2 === 0);
