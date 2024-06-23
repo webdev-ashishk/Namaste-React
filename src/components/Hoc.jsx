@@ -22,23 +22,33 @@ export default function Hoc() {
   ) : (
     <div>
       <h1>LIST OF TODO</h1>
-      {/* <TodoCard todo={todo} /> */}
-      {/* {todo.completed ? (
+      <div
+        style={{
+          border: "2px solid black",
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {/* <TodoCard todo={todo} /> */}
+        {/* {todo.completed ? (
         <CompletedTodo todo={todo} />
       ) : (
         <TodoCard todo={todo} />
       )} */}
-      {todo.map((singleTodo) => {
-        return (
-          <div>
-            {singleTodo.completed ? (
-              <CompletedTodo todo={singleTodo} />
-            ) : (
-              <TodoCard todo={singleTodo} />
-            )}
-          </div>
-        );
-      })}
+        {todo.map((singleTodo) => {
+          return (
+            <div>
+              {singleTodo.completed ? (
+                <CompletedTodo single={singleTodo} />
+              ) : (
+                <TodoCard single={singleTodo} />
+              )}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
