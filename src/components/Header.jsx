@@ -15,6 +15,12 @@ export default function Header() {
           <li>
             <Link to={"/contact"}>contact</Link>
           </li>
+          <li>
+            <Link to={"/hoc"}>higher order components</Link>
+          </li>{" "}
+          <li>
+            <Link to={"/liftingstateup"}>Lifting state UP</Link>
+          </li>
         </ul>
       </nav>
     </div>

@@ -29,3 +29,9 @@
 # Implementeing HOC with different api
 
 https://jsonplaceholder.typicode.com/todos
+
+## Lifting the State up in chapter-11
+
+- Parent.jsx
+- Child.jsx
+  > 1.  child sending data to parent components .

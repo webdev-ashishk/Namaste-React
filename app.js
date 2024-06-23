@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./src/components/AppLayout";
 import Error from "./src/components/Error";
 import Hoc from "./src/components/Hoc";
+import Parent from "./src/components/Parent";
 import Post from "./src/components/Post";
 // load about and contact as on demand loading
 // import Contact from "./src/components/Contact";
@@ -40,6 +41,10 @@ const appRouter = createBrowserRouter([
   {
     path: "/hoc",
     element: <Hoc />,
+  },
+  {
+    path: "/liftingstateup",
+    element: <Parent />,
   },
 ]);
 function Start() {
