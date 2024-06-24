@@ -19,7 +19,7 @@ export default function Header() {
             <Link to={"/hoc"}>higher order components</Link>
           </li>{" "}
           <li>
-            <Link to={"/liftingstateup"}>Lifting state UP</Link>
+            <Link to={"/lifting-state-up"}>Lifting state UP</Link>
           </li>
         </ul>
       </nav>

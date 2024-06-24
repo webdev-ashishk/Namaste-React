@@ -6,7 +6,7 @@ const Parent = () => {
   };
   return (
     <div>
-      <h2>Parent component</h2>
+      <p>parent</p>
       <Child alert={acceptChildData} />
     </div>
   );

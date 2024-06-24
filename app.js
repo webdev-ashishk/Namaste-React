@@ -43,7 +43,7 @@ const appRouter = createBrowserRouter([
     element: <Hoc />,
   },
   {
-    path: "/liftingstateup",
+    path: "/lifting-state-up",
     element: <Parent />,
   },
 ]);
